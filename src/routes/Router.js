@@ -1,4 +1,4 @@
-import { lazy } from "react";
+ import { lazy } from "react";
 import { Navigate } from "react-router-dom";
 
 /****Layouts*****/
@@ -15,6 +15,7 @@ const Cards = lazy(() => import("../views/ui/Cards"));
 const Grid = lazy(() => import("../views/ui/Grid"));
 const Tables = lazy(() => import("../views/ui/Tables"));
 const Forms = lazy(() => import("../views/ui/Forms"));
+const Student_Dashboard = lazy(() => import("../views/ui/student_dashboard"));
 const Breadcrumbs = lazy(() => import("../views/ui/Breadcrumbs"));
 
 /*****Routes******/
@@ -34,6 +35,7 @@ const ThemeRoutes = [
       { path: "/grid", exact: true, element: <Grid /> },
       { path: "/table", exact: true, element: <Tables /> },
       { path: "/forms", exact: true, element: <Forms /> },
+      { path: "/student_dashboard", exact: true, element: <Student_Dashboard /> },
       { path: "/breadcrumbs", exact: true, element: <Breadcrumbs /> },
     ],
   },

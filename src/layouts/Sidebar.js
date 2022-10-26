@@ -33,6 +33,11 @@ const navigation = [
     href: "/grid",
     icon: "bi bi-pencil-square",
   },
+  {
+    title: "Student Dashboard",
+    href: "/student_dashboard",
+    icon: "bi bi-person-workspace",
+  },
 ];
 
 const Sidebar = () => {
