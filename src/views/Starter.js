@@ -1,6 +1,5 @@
 import { Col, Row } from "reactstrap";
-import SalesChart from "../components/dashboard/SalesChart";
-// import Feeds from "../components/dashboard/Feeds";
+import MonthlyReport from "../components/dashboard/MonthlyReport";
 import ProjectTables from "../components/dashboard/ProjectTable";
 import TopCards from "../components/dashboard/TopCards";
 import Blog from "../components/dashboard/Blog";
@@ -8,6 +7,7 @@ import bg1 from "../assets/images/bg/bg1.jpg";
 import bg2 from "../assets/images/bg/bg2.jpg";
 import bg3 from "../assets/images/bg/bg3.jpg";
 import bg4 from "../assets/images/bg/bg4.jpg";
+import { Card, CardBody,CardTitle } from "reactstrap";
 
 const BlogData = [
   {
@@ -48,40 +48,34 @@ const Starter = () => {
   return (
     <div>
       {/***Top Cards***/}
+      <Card >
+      <CardBody>
+        <CardTitle tag="h6">Statistics</CardTitle>
       <Row>
         <Col sm="6" lg="3">
           <TopCards
             bg="bg-light-success text-success"
-            title="Salary"
-            subtitle="Salary pending"
-            earning="21k"
+            subtitle="Exams and CBSE Exams"
+            earning="0"
             icon="bi bi-wallet"
           />
         </Col>
         <Col sm="6" lg="3">
           <TopCards
             bg="bg-light-danger text-danger"
-            title="Classes Alloted"
-            subtitle="No. of lectures taken"
-            earning="12"
+            subtitle="Employee"
+            earning="233"
             icon="bi bi-coin"
           />
         </Col>
-        <Col sm="6" lg="3">
-          <TopCards
-            bg="bg-light-warning text-warning"
-            title="Project"
-            subtitle="No. of projects taken"
-            earning="1       "
-            icon="bi bi-basket3"
-          />
-        </Col>
+        </Row>
+      </CardBody>
+      </Card>
         
-      </Row>
       {/***Sales & Feed***/}
       <Row>
         <Col xxl="12">
-          <SalesChart />
+          <MonthlyReport />
         </Col>
       </Row>
       {/***Table ***/}
