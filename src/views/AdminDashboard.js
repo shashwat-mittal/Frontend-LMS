@@ -1,8 +1,8 @@
 import { Col, Row } from "reactstrap";
-import MonthlyReport from "../components/dashboard/MonthlyReport";
+import AdminGraph from "../components/dashboard/AdminGraph";
 import ProjectTables from "../components/dashboard/ProjectTable";
 import TopCards from "../components/dashboard/TopCards";
-import Blog from "../components/dashboard/Blog";
+import Blog from "../components/dashboard/Extra Files/Blog";
 import bg1 from "../assets/images/bg/bg1.jpg";
 import bg2 from "../assets/images/bg/bg2.jpg";
 import bg3 from "../assets/images/bg/bg3.jpg";
@@ -75,7 +75,7 @@ const Starter = () => {
       {/***Sales & Feed***/}
       <Row>
         <Col xxl="12">
-          <MonthlyReport />
+          <AdminGraph />
         </Col>
       </Row>
       {/***Table ***/}

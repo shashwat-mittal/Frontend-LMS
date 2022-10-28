@@ -1,36 +1,36 @@
 import { Button, Nav, NavItem } from "reactstrap";
-import Logo from "./Logo";
+import Logo from "../Logo";
 import { Link, useLocation } from "react-router-dom";
 
 const navigation = [
   {
     title: "Front Office",
-    href: "/starter",
+    href: "/frontOffice",
     icon: "bi bi-bar-chart-fill",
   },
   {
     title: "Admission Form Report", //Admission Form Sale Report
-    href: "/alerts",
+    href: "/admissionForm",
     icon: "bi bi-file-earmark-spreadsheet",
   },
   {
     title: "Student (Academic)",
-    href: "/badges",
+    href: "/studentforAdmin",
     icon: "bi bi-person-workspace",
   },
   {
     title: "CBSE Examination",
-    href: "/buttons",
+    href: "/cbse",
     icon: "bi bi-journal-text",
   },
   {
     title: "MIS",
-    href: "/cards",
+    href: "/mis",
     icon: "bbi bi-bar-chart-line",
   },
   {
     title: "Change Password",
-    href: "/grid",
+    href: "/changepwd",
     icon: "bi bi-pencil-square",
   },
 

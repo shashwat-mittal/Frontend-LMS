@@ -1,22 +1,21 @@
 import { Outlet } from "react-router-dom";
-import SidebarStudent from "./Sidebar_student";
+import Sidebar from "./Sidebar/SidebarAdmin";
 import Header from "./Header";
 import { Container } from "reactstrap";
 
-const Student = () => {
+const FullLayout = () => {
   return (
     <main>
       <div className="pageWrapper d-lg-flex">
         {/********Sidebar**********/}
         <aside className="sidebarArea shadow" id="sidebarArea">
-          <SidebarStudent />
+          <Sidebar />
         </aside>
         {/********Content Area**********/}
 
         <div className="contentArea">
           {/********header**********/}
           <Header />
-          {/********Middle Content**********/}
           <Container className="p-4 wrapper" fluid>
             <Outlet />
           </Container>
@@ -26,4 +25,4 @@ const Student = () => {
   );
 };
 
-export default Student;
+export default FullLayout;

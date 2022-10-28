@@ -1,9 +1,9 @@
 import { Col, Row } from "reactstrap";
-import SalesChart from "../components/dashboard/SalesChart";
+import StudentGraph from "../components/dashboard/StudentGraph";
 // import Feeds from "../components/dashboard/Feeds";
 import ProjectTables from "../components/dashboard/ProjectTable";
 import TopCards from "../components/dashboard/TopCards";
-import Blog from "../components/dashboard/Blog";
+import Blog from "../components/dashboard/Extra Files/Blog";
 import bg1 from "../assets/images/bg/bg1.jpg";
 import bg2 from "../assets/images/bg/bg2.jpg";
 import bg3 from "../assets/images/bg/bg3.jpg";
@@ -80,7 +80,7 @@ const Starter = () => {
       {/***Sales & Feed***/}
       <Row>
         <Col xxl="12">
-          <SalesChart />
+          <StudentGraph />
         </Col>
       </Row>
       {/***Table ***/}
