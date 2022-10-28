@@ -46,6 +46,15 @@ const Home = () => {
                 Admin
               </Button>
               </Link>
+              <span> </span><span> </span><span> </span>
+              <Link to="/StudentLayout" style={{ textDecoration: 'none' }}>
+              <Button variant="primary"
+                className="content-wrap  mt-3 " 
+                style={{ background: "rgb(51 , 153 , 255)", relativeposition:" " }}
+                type="submit">
+                Student
+              </Button>
+              </Link>
               
 
 
