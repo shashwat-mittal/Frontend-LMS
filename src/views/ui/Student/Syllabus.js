@@ -1,132 +1,191 @@
-import { Container, Col, Row, Card, CardBody, CardTitle } from "reactstrap";
+import { Badge, Button, Card, CardBody, CardTitle, Row, Col } from "reactstrap";
 
-const Grid = () => {
+const Badges = () => {
   return (
     <div>
       {/* --------------------------------------------------------------------------------*/}
-      {/* Start Inner Div*/}
-      {/* --------------------------------------------------------------------------------*/}
-      {/* --------------------------------------------------------------------------------*/}
       {/* Row*/}
       {/* --------------------------------------------------------------------------------*/}
-      <Card>
-        <CardTitle tag="h6" className="border-bottom p-3 mb-0">
-          Grid Layout
-        </CardTitle>
-        <CardBody className="">
-          <Container>
-            <Row>
-              <Col>
-                <div className="bg-light p-2 border">.col</div>
-              </Col>
-            </Row>
-            <Row className="mt-3">
-              <Col>
-                <div className="bg-light p-2 border">.col</div>
-              </Col>
-              <Col>
-                <div className="bg-light p-2 border">.col</div>
-              </Col>
-              <Col>
-                <div className="bg-light p-2 border">.col</div>
-              </Col>
-              <Col>
-                <div className="bg-light p-2 border">.col</div>
-              </Col>
-            </Row>
-            <Row className="mt-3">
-              <Col xs="3">
-                <div className="bg-light p-2 border">.col-3</div>
-              </Col>
-              <Col xs="auto">
-                <div className="bg-light p-2 border">
-                  .col-auto - variable width content
-                </div>
-              </Col>
-              <Col xs="3">
-                <div className="bg-light p-2 border">.col-3</div>
-              </Col>
-            </Row>
-            <Row className="mt-3">
-              <Col xs="6">
-                <div className="bg-light p-2 border">.col-6</div>
-              </Col>
-              <Col xs="6">
-                <div className="bg-light p-2 border">.col-6</div>
-              </Col>
-            </Row>
-            <Row className="mt-3">
-              <Col xs="6" sm="4">
-                <div className="bg-light p-2 border">.col-6 .col-sm-4</div>
-              </Col>
-              <Col xs="6" sm="4">
-                <div className="bg-light p-2 border">.col-6 .col-sm-4</div>
-              </Col>
-              <Col sm="4">
-                <div className="bg-light p-2 border">.col-sm-4</div>
-              </Col>
-            </Row>
-            <Row className="mt-3">
-              <Col
-                sm={{
-                  offset: 1,
-                  order: 2,
-                  size: 6,
-                }}
-              >
-                <div className="bg-light p-2 border">
-                  .col-sm-6 .col-sm-order-2 .col-sm-offset-2
-                </div>
-              </Col>
-            </Row>
-            <Row className="mt-3">
-              <Col
-                sm="12"
-                md={{
-                  offset: 2,
-                  size: 8,
-                }}
-              >
-                <div className="bg-light p-2 border">
-                  .col-sm-12 .col-md-6 .col-md-offset-3
-                </div>
-              </Col>
-            </Row>
-            <Row className="mt-3">
-              <Col
-                sm={{
-                  offset: 1,
-                  size: "auto",
-                }}
-              >
-                <div className="bg-light p-2 border">
-                  .col-sm .col-sm-offset-1
-                </div>
-              </Col>
-              <Col
-                sm={{
-                  offset: 1,
-                  size: "auto",
-                }}
-              >
-                <div className="bg-light p-2 border">
-                  .col-sm .col-sm-offset-1
-                </div>
-              </Col>
-            </Row>
-          </Container>
-        </CardBody>
-      </Card>
+      <Row>
+        <Col xs="12" md="12" sm="12">
+          {/* --------------------------------------------------------------------------------*/}
+          {/* Card-1*/}
+          {/* --------------------------------------------------------------------------------*/}
+          <Card>
+            <CardTitle tag="h6" className="border-bottom p-3 mb-0">
+              Badges
+            </CardTitle>
+            <CardBody className="">
+              <div>
+                <h1>
+                  Heading <Badge color="secondary">New</Badge>
+                </h1>
+                <h2>
+                  Heading <Badge color="secondary">New</Badge>
+                </h2>
+                <h3>
+                  Heading <Badge color="secondary">New</Badge>
+                </h3>
+                <h4>
+                  Heading <Badge color="secondary">New</Badge>
+                </h4>
+                <h5>
+                  Heading <Badge color="secondary">New</Badge>
+                </h5>
+                <h6>
+                  Heading <Badge color="secondary">New</Badge>
+                </h6>
+              </div>
+            </CardBody>
+          </Card>
+        </Col>
+        <Col xs="12" md="12" sm="12">
+          {/* --------------------------------------------------------------------------------*/}
+          {/* Card-2*/}
+          {/* --------------------------------------------------------------------------------*/}
+          <Card>
+            <CardTitle tag="h6" className="border-bottom p-3 mb-0">
+              Badges with Button
+            </CardTitle>
+            <CardBody className="">
+              <div>
+                <Button color="primary" outline>
+                  Notifications <Badge color="secondary">1</Badge>
+                </Button>
+                <Button color="secondary" className="ms-3" outline>
+                  Notifications <Badge color="secondary">2</Badge>
+                </Button>
+                <Button color="info" className="ms-3" outline>
+                  Notifications <Badge color="secondary">3</Badge>
+                </Button>
+                <Button color="warning" className="ms-3" outline>
+                  Notifications <Badge color="secondary">4</Badge>
+                </Button>
+                <Button color="danger" className="ms-3" outline>
+                  Notifications <Badge color="secondary">5</Badge>
+                </Button>
+              </div>
+            </CardBody>
+          </Card>
+        </Col>
+        <Col xs="12" md="6">
+          {/* --------------------------------------------------------------------------------*/}
+          {/* Card-3*/}
+          {/* --------------------------------------------------------------------------------*/}
+          <Card>
+            <CardTitle tag="h6" className="border-bottom p-3 mb-0">
+              Badges with Contextual variations
+            </CardTitle>
+            <CardBody className="">
+              <div>
+                <Badge color="primary">Primary</Badge>
+                <Badge color="secondary" className="ms-3">
+                  Secondary
+                </Badge>
+                <Badge color="success" className="ms-3">
+                  Success
+                </Badge>
+                <Badge color="danger" className="ms-3">
+                  Danger
+                </Badge>
+                <Badge color="warning" className="ms-3">
+                  Warning
+                </Badge>
+                <Badge color="info" className="ms-3">
+                  Info
+                </Badge>
+                <Badge color="light" className="ms-3">
+                  Light
+                </Badge>
+                <Badge color="dark" className="ms-3">
+                  Dark
+                </Badge>
+              </div>
+            </CardBody>
+          </Card>
+        </Col>
+        <Col xs="12" md="6">
+          {/* --------------------------------------------------------------------------------*/}
+          {/* Card-4*/}
+          {/* --------------------------------------------------------------------------------*/}
+          <Card>
+            <CardTitle tag="h6" className="border-bottom p-3 mb-0">
+              Badges with Pills
+            </CardTitle>
+            <CardBody className="">
+              <div>
+                <Badge color="primary" pill>
+                  Primary
+                </Badge>
+                <Badge color="secondary" className="ms-3" pill>
+                  Secondary
+                </Badge>
+                <Badge color="success" className="ms-3" pill>
+                  Success
+                </Badge>
+                <Badge color="danger" className="ms-3" pill>
+                  Danger
+                </Badge>
+                <Badge color="warning" className="ms-3" pill>
+                  Warning
+                </Badge>
+                <Badge color="info" className="ms-3" pill>
+                  Info
+                </Badge>
+                <Badge color="light" className="ms-3" pill>
+                  Light
+                </Badge>
+                <Badge color="dark" className="ms-3" pill>
+                  Dark
+                </Badge>
+              </div>
+            </CardBody>
+          </Card>
+        </Col>
+        <Col xs="12" md="6">
+          {/* --------------------------------------------------------------------------------*/}
+          {/* Card-5*/}
+          {/* --------------------------------------------------------------------------------*/}
+          <Card>
+            <CardTitle tag="h6" className="border-bottom p-3 mb-0">
+              Badges with Links
+            </CardTitle>
+            <CardBody className="">
+              <div>
+                <Badge href="" color="primary">
+                  Primary
+                </Badge>
+                <Badge href="" color="secondary" className="ms-3">
+                  Secondary
+                </Badge>
+                <Badge href="" color="success" className="ms-3">
+                  Success
+                </Badge>
+                <Badge href="" color="danger" className="ms-3">
+                  Danger
+                </Badge>
+                <Badge href="" color="warning" className="ms-3">
+                  Warning
+                </Badge>
+                <Badge href="" color="info" className="ms-3">
+                  Info
+                </Badge>
+                <Badge href="" color="light" className="ms-3">
+                  Light
+                </Badge>
+                <Badge href="" color="dark" className="ms-3">
+                  Dark
+                </Badge>
+              </div>
+            </CardBody>
+          </Card>
+        </Col>
+      </Row>
       {/* --------------------------------------------------------------------------------*/}
       {/* Row*/}
-      {/* --------------------------------------------------------------------------------*/}
-
-      {/* --------------------------------------------------------------------------------*/}
-      {/* End Inner Div*/}
       {/* --------------------------------------------------------------------------------*/}
     </div>
   );
 };
 
-export default Grid;
-
+export default Badges;
