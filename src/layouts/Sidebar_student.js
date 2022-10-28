@@ -4,39 +4,33 @@ import { Link, useLocation } from "react-router-dom";
 
 const navigation = [
   {
-    title: "Front Office",
-    href: "/starter",
+    title: "Schedule",
+    href: "/schedule",
     icon: "bi bi-bar-chart-fill",
   },
   {
-    title: "Admission Form Report", //Admission Form Sale Report
-    href: "/alerts",
+    title: "Fees",
+    href: "/fees",
     icon: "bi bi-file-earmark-spreadsheet",
   },
   {
-    title: "Student (Academic)",
-    href: "/badges",
+    title: "Notice",
+    href: "/notice",
     icon: "bi bi-person-workspace",
   },
   {
-    title: "CBSE Examination",
-    href: "/buttons",
+    title: "Syllabus",
+    href: "/syllabus",
     icon: "bi bi-journal-text",
   },
   {
-    title: "MIS",
-    href: "/cards",
+    title: "Test Report",
+    href: "/testreport",
     icon: "bbi bi-bar-chart-line",
   },
-  {
-    title: "Change Password",
-    href: "/grid",
-    icon: "bi bi-pencil-square",
-  },
-
 ];
 
-const Sidebar = () => {
+const SidebarStudent = () => {
   const showMobilemenu = () => {
     document.getElementById("sidebarArea").classList.toggle("showSidebar");
   };
@@ -77,4 +71,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default SidebarStudent;
