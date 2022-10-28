@@ -9,7 +9,7 @@ const navigation = [
     icon: "bi bi-bar-chart-fill",
   },
   {
-    title: "Admission Form Report", //Admission Form Sale Report
+    title: "Admission Forms", //Admission Form Sale Report
     href: "/admissionForm",
     icon: "bi bi-file-earmark-spreadsheet",
   },
