@@ -1,7 +1,9 @@
 import { Card, CardBody, CardSubtitle, CardTitle } from "reactstrap";
 import Chart from "react-apexcharts";
-
-const MonthlyReport = () => {
+import {table,tbody,thead,tr,th} from 'react-bootstrap';
+import { AppContext } from "../../Context/Context"
+import { useContext } from "react";
+const AdminGraph = () => {
   const chartoptions = {
     series: [
       {
@@ -45,23 +47,87 @@ const MonthlyReport = () => {
       },
     },
   };
+  
+  const {transactions}=useContext(AppContext);
+  console.log(transactions);
   return (
-    <Card>
-      <CardBody>
-        <CardTitle tag="h5">Monthly Report</CardTitle>
-        <CardSubtitle className="text-muted" tag="h5" style={{ textAlign:"center"}}>
-          Monthly Analysis Report
-        </CardSubtitle>
-        <Chart
-          type="line"
-          width="100%"
-          height="390"
-          options={chartoptions.options}
-          series={chartoptions.series}
-        ></Chart>
-      </CardBody>
-    </Card>
+    <div>
+    <CardTitle tag="h4" style={{ textAlign: "left", color: "black" }}>Monthly Report</CardTitle>
+    <CardSubtitle className="text-muted" tag="h5" style={{ textAlign: "center" }}>
+      Monthly Analysis Report
+    </CardSubtitle>
+    <Chart
+      type="line"
+      height="390"
+      options={chartoptions.options}
+      series={chartoptions.series}
+    ></Chart>
+    <table bordered responsive class="table table-success table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Sr No.</th>
+          <th scope="col">Month</th>
+          <th scope="col">Payment</th>
+          <th scope="col">Receipt</th>
+        </tr>
+      </thead>
+
+      {/* <tbody>
+        {transactions.map((transaction)=>(
+          <tr>
+          <td>{transaction.month}</td>
+          <td>{transaction.payment}</td>
+          <td>{transaction.receipt}</td>
+          </tr>
+        ))}
+      </tbody> */}
+      <tbody>
+    <tr>
+      <th scope="row">
+        1
+      </th>
+      <td>
+        Mark
+      </td>
+      <td>
+        Otto
+      </td>
+      <td>
+        @mdo
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">
+        2
+      </th>
+      <td>
+        Jacob
+      </td>
+      <td>
+        Thornton
+      </td>
+      <td>
+        @fat
+      </td>
+    </tr>
+    <tr>
+      <th scope="row">
+        3
+      </th>
+      <td>
+        Larry
+      </td>
+      <td>
+        the Bird
+      </td>
+      <td>
+        @twitter
+      </td>
+    </tr>
+  </tbody>
+    </table>
+  </div>
   );
 };
 
-export default MonthlyReport;
+export default AdminGraph

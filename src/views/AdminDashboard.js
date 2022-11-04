@@ -1,49 +1,22 @@
 import { Col, Row } from "reactstrap";
+import ClassStrengthPie from "../components/dashboard/ClassStrengthPie";
+import FeesStatus from "../components/dashboard/FeesStatus";
+import Defaulters from "../components/dashboard/Defaulters";
 import AdminGraph from "../components/dashboard/AdminGraph";
-import ProjectTables from "../components/dashboard/ProjectTable";
+import Finance from "../components/dashboard/Finance";
 import TopCards from "../components/dashboard/TopCards";
-import Blog from "../components/dashboard/Extra Files/Blog";
-import bg1 from "../assets/images/bg/bg1.jpg";
-import bg2 from "../assets/images/bg/bg2.jpg";
-import bg3 from "../assets/images/bg/bg3.jpg";
-import bg4 from "../assets/images/bg/bg4.jpg";
 import { Card, CardBody,CardTitle } from "reactstrap";
-
-const BlogData = [
-  {
-    image: bg1,
-    title: "Subject-1",
-    subtitle: "Teacher-1",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis dolor iusto, magnam et iste omnis.",
-    btnbg: "primary",
-  },
-  {
-    image: bg2,
-    title: "Subject-2",
-    subtitle: "Teacher-2",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis dolor iusto, magnam et iste omnis.",
-    btnbg: "primary",
-  },
-  {
-    image: bg3,
-    title: "Subject-3",
-    subtitle: "Teacher-3",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis dolor iusto, magnam et iste omnis.",
-    btnbg: "primary",
-  },
-  {
-    image: bg4,
-    title: "Subject-4",
-    subtitle: "Teacher-4",
-    description:
-      "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis dolor iusto, magnam et iste omnis.",
-    btnbg: "primary",
-  },
-];
-
+import { styled } from '@mui/material/styles';
+import Paper from '@mui/material/Paper';
+import Grid from '@mui/material/Grid';
+import "../AdminDash.css";
+const Item = styled(Paper)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'dark' ? '#1A2027' : '#fff',
+  ...theme.typography.body2,
+  padding: theme.spacing(1),
+  textAlign: 'center',
+  color: theme.palette.text.secondary,
+}));
 const Starter = () => {
   return (
     <div>
@@ -71,34 +44,22 @@ const Starter = () => {
         </Row>
       </CardBody>
       </Card>
-        
-      {/***Sales & Feed***/}
-      <Row>
-        <Col xxl="12">
+        <div className="container">
+        <div className="col1">
+          <Item style={{ margin: "15px", marginLeft:"0px", padding: "10px", backgroundColor: "#D7E4E9" }}><ClassStrengthPie/></Item>
+          <Item style={{ margin: "15px", marginLeft:"0px", padding: "10px", backgroundColor: "#D7E4E9" }}><Defaulters /></Item>
+          <Item style={{ margin: "15px", marginLeft:"0px", padding: "10px", backgroundColor: "#D7E4E9" }}><Finance/></Item>
+        </div>
+        <div className="col2">
+          <Item style={{ margin: "15px", marginRight:"0px", padding: "20px", backgroundColor: "#D7E4E9" }}>
+          <FeesStatus />
+          </Item>
+          <Item style={{ margin: "15px", marginRight:"0px", padding: "20px", backgroundColor: "#D7E4E9" }}>
           <AdminGraph />
-        </Col>
-      </Row>
-      {/***Table ***/}
-      <Row>
-        <Col lg="7" xxl="8" md="12">
-          <ProjectTables />
-        </Col>
-        
-      </Row>
-      {/***Blog Cards***/}
-      <Row>
-        {BlogData.map((blg, index) => (
-          <Col sm="6" lg="6" xl="3" key={index}>
-            <Blog
-              image={blg.image}
-              title={blg.title}
-              subtitle={blg.subtitle}
-              text={blg.description}
-              color={blg.btnbg}
-            />
-          </Col>
-        ))}
-      </Row>
+          </Item>
+        </div>
+      </div>
+     
     </div>
   );
 };
