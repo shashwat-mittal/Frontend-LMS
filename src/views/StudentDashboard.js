@@ -1,7 +1,7 @@
 import { Col, Row } from "reactstrap";
 import StudentGraph from "../components/dashboard/StudentGraph";
 // import Feeds from "../components/dashboard/Feeds";
-import ProjectTables from "../components/dashboard/ProjectTable";
+import Teachers from "../components/dashboard/Teachers";
 import TopCards from "../components/dashboard/TopCards";
 import Blog from "../components/dashboard/Extra Files/Blog";
 import bg1 from "../assets/images/bg/bg1.jpg";
@@ -51,30 +51,30 @@ const Starter = () => {
         <Col sm="6" lg="3">
           <TopCards
             bg="bg-light-success text-success"
-            title="Salary"
-            subtitle="Salary pending"
-            earning="21k"
-            icon="bi bi-wallet"
+            title="Percentage"
+            subtitle="Percentage"
+            earning="96.2%"
+            icon="bi bi-pencil-square"
           />
         </Col>
         <Col sm="6" lg="3">
           <TopCards
             bg="bg-light-danger text-danger"
-            title="Classes Alloted"
-            subtitle="No. of lectures taken"
-            earning="12"
+            title="Fees"
+            subtitle="Fees Paid"
+            earning="30k"
             icon="bi bi-coin"
           />
         </Col>
-        <Col sm="6" lg="3">
+        {/* <Col sm="6" lg="3">
           <TopCards
             bg="bg-light-warning text-warning"
-            title="Project"
-            subtitle="No. of projects taken"
+            title="Attendance"
+            subtitle="Attendance"
             earning="1       "
             icon="bi bi-basket3"
           />
-        </Col>
+        </Col> */}
 
       </Row>
       {/***Sales & Feed***/}
@@ -84,14 +84,14 @@ const Starter = () => {
         </Col>
       </Row>
       {/***Table ***/}
-      <Row>
+      {/* <Row>
         <Col lg="7" xxl="8" md="12">
-          <ProjectTables />
+          <Teachers />
         </Col>
         
-      </Row>
+      </Row> */}
       {/***Blog Cards***/}
-      <Row>
+      {/* <Row>
         {BlogData.map((blg, index) => (
           <Col sm="6" lg="6" xl="3" key={index}>
             <Blog
@@ -103,6 +103,11 @@ const Starter = () => {
             />
           </Col>
         ))}
+      </Row> */}
+      <Row>
+      <Col lg="12">
+        <Teachers />
+      </Col>
       </Row>
     </div>
   );

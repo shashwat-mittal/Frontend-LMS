@@ -4,15 +4,20 @@ import { Link, useLocation } from "react-router-dom";
 
 const navigation = [
   {
+    title: "Dashboard",
+    href: "/studentDashboard",
+    icon: "bi bi-pencil-square",
+  },
+  {
     title: "Schedule",
     href: "/schedule",
     icon: "bi bi-bar-chart-fill",
   },
-  {
-    title: "Fees",
-    href: "/fees",
-    icon: "bi bi-file-earmark-spreadsheet",
-  },
+  // {
+  //   title: "Fees",
+  //   href: "/fees",
+  //   icon: "bi bi-file-earmark-spreadsheet",
+  // },
   {
     title: "Notice",
     href: "/notice",

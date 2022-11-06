@@ -1,5 +1,5 @@
 //Tables
-import ProjectTables from "../../../components/dashboard/ProjectTable";
+// import ProjectTables from "../../../components/dashboard/Teachers";
 import { Row, Col, Table, Card, CardTitle, CardBody } from "reactstrap";
 
 const Tables = () => {
@@ -8,9 +8,9 @@ const Tables = () => {
       {/* --------------------------------------------------------------------------------*/}
       {/* table-1*/}
       {/* --------------------------------------------------------------------------------*/}
-      <Col lg="12">
+      {/* <Col lg="12">
         <ProjectTables />
-      </Col>
+      </Col> */}
       {/* --------------------------------------------------------------------------------*/}
       {/* table-2*/}
       {/* --------------------------------------------------------------------------------*/}
@@ -18,128 +18,73 @@ const Tables = () => {
         <Card>
           <CardTitle tag="h6" className="border-bottom p-3 mb-0">
             <i className="bi bi-card-text me-2"> </i>
-            Table with Border
-          </CardTitle>
-          <CardBody className="">
-            <Table bordered>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Username</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
-            </Table>
-          </CardBody>
-        </Card>
-      </Col>
-      {/* --------------------------------------------------------------------------------*/}
-      {/* table-3*/}
-      {/* --------------------------------------------------------------------------------*/}
-      <Col lg="12">
-        <Card>
-          <CardTitle tag="h6" className="border-bottom p-3 mb-0">
-            <i className="bi bi-card-text me-2"> </i>
-            Table with Striped
+            Report Card
           </CardTitle>
           <CardBody className="">
             <Table bordered striped>
               <thead>
                 <tr>
-                  <th>#</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Username</th>
+                  <th>Subjects</th>
+                  <th>Term 1</th>
+                  <th>Term 2</th>
+                  <th>Half-Yearly</th>
+                  <th>Term 3</th>
+                  <th>Term 4</th>
+                  <th>Yearly</th>
                 </tr>
               </thead>
               <tbody>
                 <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
+                  <th>Maths</th>
+                  <th>28</th>
+                  <th>27</th>
+                  <th>75</th>
+                  <th>29</th>
+                  <th>30</th>
+                  <th>78</th>
                 </tr>
                 <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
+                  <th>Science</th>
+                  <th>28</th>
+                  <th>27</th>
+                  <th>75</th>
+                  <th>29</th>
+                  <th>30</th>
+                  <th>78</th>
                 </tr>
                 <tr>
-                  <th scope="row">3</th>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                  <td>@twitter</td>
+                  <th>English</th>
+                  <th>28</th>
+                  <th>27</th>
+                  <th>75</th>
+                  <th>29</th>
+                  <th>30</th>
+                  <th>78</th>
+                </tr>
+                <tr>
+                  <th>Hindi</th>
+                  <th>28</th>
+                  <th>27</th>
+                  <th>75</th>
+                  <th>29</th>
+                  <th>30</th>
+                  <th>78</th>
+                </tr>
+                <tr>
+                  <th>Social Science</th>
+                  <th>28</th>
+                  <th>27</th>
+                  <th>75</th>
+                  <th>29</th>
+                  <th>30</th>
+                  <th>78</th>
                 </tr>
               </tbody>
             </Table>
           </CardBody>
         </Card>
       </Col>
-      {/* --------------------------------------------------------------------------------*/}
-      {/* table-3*/}
-      {/* --------------------------------------------------------------------------------*/}
-      <Col lg="12">
-        <Card>
-          <CardTitle tag="h6" className="border-bottom p-3 mb-0">
-            <i className="bi bi-card-text me-2"> </i>
-            Table with Hover
-          </CardTitle>
-          <CardBody className="">
-            <Table bordered hover>
-              <thead>
-                <tr>
-                  <th>#</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Username</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">1</th>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <th scope="row">2</th>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <th scope="row">3</th>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                  <td>@twitter</td>
-                </tr>
-              </tbody>
-            </Table>
-          </CardBody>
-        </Card>
-      </Col>
+
     </Row>
   );
 };

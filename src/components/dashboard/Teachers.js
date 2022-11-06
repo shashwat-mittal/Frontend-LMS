@@ -10,7 +10,7 @@ const tableData = [
     avatar: user1,
     name: "Hanna Gover",
     email: "hgover@gmail.com",
-    project: "Science-Magnetism",
+    subject: "Social Science",
     status: "pending",
     weeks: "2",
   },
@@ -18,7 +18,7 @@ const tableData = [
     avatar: user2,
     name: "Hanna Gover",
     email: "hgover@gmail.com",
-    project: "Biology-Photosynthesis",
+    subject: "Hindi",
     status: "done",
     weeks: "2",
   },
@@ -26,7 +26,7 @@ const tableData = [
     avatar: user3,
     name: "Hanna Gover",
     email: "hgover@gmail.com",
-    project: "Maths Number System",
+    subject: "Maths",
     status: "holt",
     weeks: "4",
   },
@@ -34,7 +34,7 @@ const tableData = [
     avatar: user4,
     name: "Hanna Gover",
     email: "hgover@gmail.com",
-    project: "English Dictionary",
+    subject: "English",
     status: "pending",
     weeks: "5",
   },
@@ -42,29 +42,29 @@ const tableData = [
     avatar: user5,
     name: "Hanna Gover",
     email: "hgover@gmail.com",
-    project: "Science-Current and Electricity",
+    subject: "Science",
     status: "done",
     weeks: "3",
   },
 ];
 
-const ProjectTables = () => {
+const subjectTables = () => {
   return (
     <div>
       <Card>
         <CardBody>
-          <CardTitle tag="h5">Project Listing</CardTitle>
-          <CardSubtitle className="mb-2 text-muted" tag="h6">
-            Overview of the projects
-          </CardSubtitle>
+          <CardTitle tag="h5">Faculty</CardTitle>
+          {/* <CardSubtitle className="mb-2 text-muted" tag="h6">
+            Overview of the subjects
+          </CardSubtitle> */}
 
           <Table className="no-wrap mt-3 align-middle" responsive borderless>
             <thead>
               <tr>
-                <th>Team Lead</th>
-                <th>Project</th>
+                <th>Teacher</th>
+                <th>Subject</th>
 
-                <th>Status</th>
+                {/* <th>Status</th> */}
               </tr>
             </thead>
             <tbody>
@@ -85,8 +85,8 @@ const ProjectTables = () => {
                       </div>
                     </div>
                   </td>
-                  <td>{tdata.project}</td>
-                  <td>
+                  <td>{tdata.subject}</td>
+                  {/* <td>
                     {tdata.status === "pending" ? (
                       <span className="p-2 bg-danger rounded-circle d-inline-block ms-3"></span>
                     ) : tdata.status === "holt" ? (
@@ -94,7 +94,7 @@ const ProjectTables = () => {
                     ) : (
                       <span className="p-2 bg-success rounded-circle d-inline-block ms-3"></span>
                     )}
-                  </td>
+                  </td> */}
 
                   <td>{tdata.budget}</td>
                 </tr>
@@ -107,4 +107,4 @@ const ProjectTables = () => {
   );
 };
 
-export default ProjectTables;
+export default subjectTables;

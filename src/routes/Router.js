@@ -18,7 +18,7 @@ const Home =lazy(() => import("../components/registration/Home"))
 /*****Student Pages ****/
 const StudentDashboard = lazy(() => import("../views/StudentDashboard"));
 const ClassSchedule = lazy(() => import("../views/ui/Student/ClassSchedule.js"));
-const Fees = lazy(() => import("../views/ui/Student/Fees.js"));
+const Fees = lazy(() => import("../views/ui/Extra Files/Fees.js"));
 const Notice = lazy(() => import("../views/ui/Student/NoticeBoard"));
 const Syllabus = lazy(() => import("../views/ui/Student/Syllabus"));
 const TestReport = lazy(() => import("../views/ui/Student/TestReport"));
