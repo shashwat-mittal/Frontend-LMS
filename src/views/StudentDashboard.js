@@ -1,4 +1,4 @@
-import { Col, Row } from "reactstrap";
+import { Col, Row, Container, Card, CardBody, CardTitle } from "reactstrap";
 import StudentGraph from "../components/dashboard/StudentGraph";
 // import Feeds from "../components/dashboard/Feeds";
 import Teachers from "../components/dashboard/Teachers";
@@ -60,10 +60,10 @@ const Starter = () => {
         <Col sm="6" lg="3">
           <TopCards
             bg="bg-light-danger text-danger"
-            title="Fees"
-            subtitle="Fees Paid"
-            earning="30k"
-            icon="bi bi-coin"
+            title="Rank"
+            subtitle="Class Rank"
+            earning="3"
+            icon="bi bi-person-workspace"
           />
         </Col>
         {/* <Col sm="6" lg="3">
@@ -77,33 +77,66 @@ const Starter = () => {
         </Col> */}
 
       </Row>
-      {/***Sales & Feed***/}
-      <Row>
+      {/***Graph***/}
+      {/* <Row>
         <Col xxl="12">
           <StudentGraph />
         </Col>
-      </Row>
-      {/***Table ***/}
-      {/* <Row>
-        <Col lg="7" xxl="8" md="12">
-          <Teachers />
-        </Col>
-        
       </Row> */}
-      {/***Blog Cards***/}
-      {/* <Row>
-        {BlogData.map((blg, index) => (
-          <Col sm="6" lg="6" xl="3" key={index}>
-            <Blog
-              image={blg.image}
-              title={blg.title}
-              subtitle={blg.subtitle}
-              text={blg.description}
-              color={blg.btnbg}
-            />
-          </Col>
-        ))}
-      </Row> */}
+      
+      <Card>
+        <CardTitle tag="h6" className="border-bottom p-3 mb-0">
+          Personal Details
+        </CardTitle>
+        <CardBody className="">
+          <Container>
+            <Row className="mt-3">
+              <Col>
+                <div className=" p-2">Name</div>
+              </Col>
+              <Col>
+                <div className="bg-light p-2 border">Vaibhav Gupta</div>
+              </Col>
+              <Col>
+                <div className=" p-2">Admission Number</div>
+              </Col>
+              <Col>
+                <div className="bg-light p-2 border">12345</div>
+              </Col>
+            </Row>
+            <Row className="mt-3">
+              <Col>
+                <div className=" p-2">Name</div>
+              </Col>
+              <Col>
+                <div className="bg-light p-2 border">Vaibhav Gupta</div>
+              </Col>
+              <Col>
+                <div className=" p-2">Admission Number</div>
+              </Col>
+              <Col>
+                <div className="bg-light p-2 border">12345</div>
+              </Col>
+            </Row>
+            <Row className="mt-3">
+              <Col>
+                <div className=" p-2">Name</div>
+              </Col>
+              <Col>
+                <div className="bg-light p-2 border">Vaibhav Gupta</div>
+              </Col>
+              <Col>
+                <div className=" p-2">Admission Number</div>
+              </Col>
+              <Col>
+                <div className="bg-light p-2 border">12345</div>
+              </Col>
+            </Row>
+          </Container>
+        </CardBody>
+      </Card>
+     
+    
       <Row>
       <Col lg="12">
         <Teachers />
