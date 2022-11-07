@@ -101,35 +101,77 @@ const Starter = () => {
                 <div className=" p-2">Admission Number</div>
               </Col>
               <Col>
-                <div className="bg-light p-2 border">12345</div>
+                <div className="bg-light p-2 border">1471</div>
               </Col>
             </Row>
             <Row className="mt-3">
               <Col>
-                <div className=" p-2">Name</div>
+                <div className=" p-2">Date of Birth</div>
               </Col>
               <Col>
-                <div className="bg-light p-2 border">Vaibhav Gupta</div>
+                <div className="bg-light p-2 border">03-08-2005</div>
               </Col>
               <Col>
-                <div className=" p-2">Admission Number</div>
+                <div className=" p-2">Date of Joining</div>
               </Col>
               <Col>
-                <div className="bg-light p-2 border">12345</div>
+                <div className="bg-light p-2 border">06-04-2009</div>
               </Col>
             </Row>
             <Row className="mt-3">
               <Col>
-                <div className=" p-2">Name</div>
+                <div className=" p-2">Father's Name</div>
               </Col>
               <Col>
-                <div className="bg-light p-2 border">Vaibhav Gupta</div>
+                <div className="bg-light p-2 border">Rajesh Gupta</div>
               </Col>
               <Col>
-                <div className=" p-2">Admission Number</div>
+                <div className=" p-2">Mother's Name</div>
               </Col>
               <Col>
-                <div className="bg-light p-2 border">12345</div>
+                <div className="bg-light p-2 border">Kavita Gupta</div>
+              </Col>
+            </Row>
+            <Row className="mt-3">
+              <Col>
+                <div className=" p-2">Gender</div>
+              </Col>
+              <Col>
+                <div className="bg-light p-2 border">Male</div>
+              </Col>
+              <Col>
+                <div className=" p-2">Category</div>
+              </Col>
+              <Col>
+                <div className="bg-light p-2 border">General</div>
+              </Col>
+            </Row>
+            <Row className="mt-3">
+              <Col>
+                <div className=" p-2">Nationality</div>
+              </Col>
+              <Col>
+                <div className="bg-light p-2 border">Indian</div>
+              </Col>
+              <Col>
+                <div className=" p-2">Contact No.</div>
+              </Col>
+              <Col>
+                <div className="bg-light p-2 border">9876598765</div>
+              </Col>
+            </Row>
+            <Row className="mt-3">
+              <Col>
+                <div className=" p-2">Address</div>
+              </Col>
+              <Col>
+                <div className="bg-light p-2 border">3, Sector 2</div>
+              </Col>
+              <Col>
+                <div className=" p-2">City/ District</div>
+              </Col>
+              <Col>
+                <div className="bg-light p-2 border">Lucknow</div>
               </Col>
             </Row>
           </Container>
