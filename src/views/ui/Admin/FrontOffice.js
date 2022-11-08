@@ -1,6 +1,5 @@
-import "./App.css";
-import React from "react";
 import { Grid } from "@mui/material";
+import "./Admin_styles.css";
 const data = [
 	{
 		name: "Anom",
