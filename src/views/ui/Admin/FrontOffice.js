@@ -1,117 +1,265 @@
-import {
-  Card,
-  Row,
-  Col,
-  CardTitle,
-  CardBody,
-  Button,
-  Form,
-  FormGroup,
-  Label,
-  Input,
-  FormText,
-} from "reactstrap";
-
+import "./App.css";
+import React from "react";
+import { Grid } from "@mui/material";
+const data = [
+	{
+		name: "Anom",
+		age: 19,
+		gender: "Male",
+		School: "MLZS",
+		Contact: "XXXXXXXXXX",
+		Address: "jbfjgskfkhgjbdskhgjbp",
+		RollNo: "1",
+		Marks: "50",
+	},
+	{
+		name: "Anom",
+		age: 19,
+		gender: "Male",
+		School: "MLZS",
+		Contact: "XXXXXXXXXX",
+		Address: "jbfjgskfkhgjbdskhgjbp",
+		RollNo: "1",
+		Marks: "50",
+	},
+	{
+		name: "Anom",
+		age: 19,
+		gender: "Male",
+		School: "MLZS",
+		Contact: "XXXXXXXXXX",
+		Address: "jbfjgskfkhgjbdskhgjbp",
+		RollNo: "1",
+		Marks: "50",
+	},
+	{
+		name: "Anom",
+		age: 19,
+		gender: "Male",
+		School: "MLZS",
+		Contact: "XXXXXXXXXX",
+		Address: "jbfjgskfkhgjbdskhgjbp",
+		RollNo: "1",
+		Marks: "50",
+	},
+	{
+		name: "Anom",
+		age: 19,
+		gender: "Male",
+		School: "MLZS",
+		Contact: "XXXXXXXXXX",
+		Address: "jbfjgskfkhgjbdskhgjbp",
+		RollNo: "1",
+		Marks: "50",
+	},
+	{
+		name: "Anom",
+		age: 19,
+		gender: "Male",
+		School: "MLZS",
+		Contact: "XXXXXXXXXX",
+		Address: "jbfjgskfkhgjbdskhgjbp",
+		RollNo: "1",
+		Marks: "50",
+	},
+	{
+		name: "Anom",
+		age: 19,
+		gender: "Male",
+		School: "MLZS",
+		Contact: "XXXXXXXXXX",
+		Address: "jbfjgskfkhgjbdskhgjbp",
+		RollNo: "1",
+		Marks: "50",
+	},
+	{
+		name: "Anom",
+		age: 19,
+		gender: "Male",
+		School: "MLZS",
+		Contact: "XXXXXXXXXX",
+		Address: "jbfjgskfkhgjbdskhgjbp",
+		RollNo: "1",
+		Marks: "50",
+	},
+	{
+		name: "Anom",
+		age: 19,
+		gender: "Male",
+		School: "MLZS",
+		Contact: "XXXXXXXXXX",
+		Address: "jbfjgskfkhgjbdskhgjbp",
+		RollNo: "1",
+		Marks: "50",
+	},
+	{
+		name: "Anom",
+		age: 19,
+		gender: "Male",
+		School: "MLZS",
+		Contact: "XXXXXXXXXX",
+		Address: "jbfjgskfkhgjbdskhgjbp",
+		RollNo: "1",
+		Marks: "50",
+	},
+	{
+		name: "Anom",
+		age: 19,
+		gender: "Male",
+		School: "MLZS",
+		Contact: "XXXXXXXXXX",
+		Address: "jbfjgskfkhgjbdskhgjbp",
+		RollNo: "1",
+		Marks: "50",
+	},
+	{
+		name: "Anom",
+		age: 19,
+		gender: "Male",
+		School: "MLZS",
+		Contact: "XXXXXXXXXX",
+		Address: "jbfjgskfkhgjbdskhgjbp",
+		RollNo: "1",
+		Marks: "50",
+	},
+	{
+		name: "Anom",
+		age: 19,
+		gender: "Male",
+		School: "MLZS",
+		Contact: "XXXXXXXXXX",
+		Address: "jbfjgskfkhgjbdskhgjbp",
+		RollNo: "1",
+		Marks: "50",
+	},
+	{
+		name: "Anom",
+		age: 19,
+		gender: "Male",
+		School: "MLZS",
+		Contact: "XXXXXXXXXX",
+		Address: "jbfjgskfkhgjbdskhgjbp",
+		RollNo: "1",
+		Marks: "50",
+	},
+	{
+		name: "Anom",
+		age: 19,
+		gender: "Male",
+		School: "MLZS",
+		Contact: "XXXXXXXXXX",
+		Address: "jbfjgskfkhgjbdskhgjbp",
+		RollNo: "1",
+		Marks: "50",
+	},
+	{
+		name: "Anom",
+		age: 19,
+		gender: "Male",
+		School: "MLZS",
+		Contact: "XXXXXXXXXX",
+		Address: "jbfjgskfkhgjbdskhgjbp",
+		RollNo: "1",
+		Marks: "50",
+	},
+];
 const Forms = () => {
-  return (
-    <Row>
-      <Col>
-        {/* --------------------------------------------------------------------------------*/}
-        {/* Card-1*/}
-        {/* --------------------------------------------------------------------------------*/}
-        <Card>
-          <CardTitle tag="h6" className="border-bottom p-3 mb-0">
-            <i className="bi bi-bell me-2"> </i>
-            Form Example
-          </CardTitle>
-          <CardBody>
-            <Form>
-              <FormGroup>
-                <Label for="exampleEmail">Email</Label>
-                <Input
-                  id="exampleEmail"
-                  name="email"
-                  placeholder="with a placeholder"
-                  type="email"
-                />
-              </FormGroup>
-              <FormGroup>
-                <Label for="examplePassword">Password</Label>
-                <Input
-                  id="examplePassword"
-                  name="password"
-                  placeholder="password placeholder"
-                  type="password"
-                />
-              </FormGroup>
-              <FormGroup>
-                <Label for="exampleSelect">Select</Label>
-                <Input id="exampleSelect" name="select" type="select">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </Input>
-              </FormGroup>
-              <FormGroup>
-                <Label for="exampleSelectMulti">Select Multiple</Label>
-                <Input
-                  id="exampleSelectMulti"
-                  multiple
-                  name="selectMulti"
-                  type="select"
-                >
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </Input>
-              </FormGroup>
-              <FormGroup>
-                <Label for="exampleText">Text Area</Label>
-                <Input id="exampleText" name="text" type="textarea" />
-              </FormGroup>
-              <FormGroup>
-                <Label for="exampleFile">File</Label>
-                <Input id="exampleFile" name="file" type="file" />
-                <FormText>
-                  This is some placeholder block-level help text for the above
-                  input. It's a bit lighter and easily wraps to a new line.
-                </FormText>
-              </FormGroup>
-              <FormGroup tag="fieldset">
-                <legend>Radio Buttons</legend>
-                <FormGroup check>
-                  <Input name="radio1" type="radio" />{" "}
-                  <Label check>
-                    Option one is this and that—be sure to include why it's
-                    great
-                  </Label>
-                </FormGroup>
-                <FormGroup check>
-                  <Input name="radio1" type="radio" />{" "}
-                  <Label check>
-                    Option two can be something else and selecting it will
-                    deselect option one
-                  </Label>
-                </FormGroup>
-                <FormGroup check disabled>
-                  <Input disabled name="radio1" type="radio" />{" "}
-                  <Label check>Option three is disabled</Label>
-                </FormGroup>
-              </FormGroup>
-              <FormGroup check>
-                <Input type="checkbox" /> <Label check>Check me out</Label>
-              </FormGroup>
-              <Button>Submit</Button>
-            </Form>
-          </CardBody>
-        </Card>
-      </Col>
-    </Row>
-  );
+	return (
+		<>
+			<div>
+				<h2
+					style={{
+						backgroundColor: "lightblue",
+						alignSelf: "stretch",
+						height: "40px",
+						padding: "20px",
+					}}
+				>
+					Exam Mark Result
+				</h2>
+			</div>
+			<Grid container spacing={3}>
+				<Grid item xs={9}>
+					<>
+						<div className="excelbox">
+							<p className="text">GreenLand Public School</p>
+							<table>
+								<tr>
+									<th>Name</th>
+									<th>Age</th>
+									<th>Gender</th>
+									<th>School</th>
+									<th>Contact</th>
+									<th>Address</th>
+									<th>RollNo</th>
+									<th>Marks</th>
+								</tr>
+								{data.map((val, key) => {
+									return (
+										<tr key={key}>
+											<td>{val.name}</td>
+											<td>{val.age}</td>
+											<td>{val.gender}</td>
+											<td>{val.School}</td>
+											<td>{val.Contact}</td>
+											<td>{val.Address}</td>
+											<td>{val.RollNo}</td>
+											<td>{val.Marks}</td>
+										</tr>
+									);
+								})}
+							</table>
+						</div>
+					</>
+				</Grid>
+
+				<Grid item xs={3}>
+					<div className="boxed">
+						<form>
+							Report Filters
+							<hr></hr>
+							Class:<br></br>
+							<select name="Class">
+								<option value="I">I</option>
+								<option value="II">II</option>
+								<option value="III">III</option>
+							</select>{" "}
+							<select name="Section">
+								<option value="A">A</option>
+								<option value="B">B</option>
+								<option value="C">C</option>
+							</select>
+							<br></br>
+							<br></br>
+							Student Name:<br></br>
+							<select name="Student Name">
+								<option value="Raj">Raj</option>
+								<option value="Ramesh">Ramesh</option>
+								<option value="Riya">Riya</option>
+							</select>
+							<br></br>
+							<br></br>
+							Date of issue:
+							<br></br>
+							<input type="date" name="Date of issue"></input>
+							<br></br>
+							<br></br>
+							Show Left Student: <input type="checkbox" name="Show Left Student"></input>
+							<br></br>
+							Show Late Admission: <input type="checkbox" name="Show Late Admission"></input>
+							<br></br>
+							<br></br>
+							Report Type:<br></br>
+							<input type="radio" name="Report Type" value="Report Card"></input>Report Card<br></br>
+							<input type="radio" name="Report Type" value="Rank Report"></input>Rank Report<br></br>
+							<br></br>
+							<input type="Submit" value="Show Report"></input>
+						</form>
+					</div>
+				</Grid>
+			</Grid>
+		</>
+	);
 };
 
 export default Forms;
