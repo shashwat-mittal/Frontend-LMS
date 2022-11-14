@@ -14,7 +14,7 @@ const Home = () => {
 			<LoginHeader />
 			{/* <div class="card" style="width: 18rem;">
   <div class="card-body"> */}
-			<div style={{ display: "flex", justifyContent: "center", alignContent: "center", flexWrap: "wrap" }}>
+			<div className="page" style={{ display: "flex", justifyContent: "center", alignContent: "center", flexWrap: "wrap" }}>
 				<Card style={{ width: "30%", height: "30%", marginTop: "6%", marginBottom: "6%" }}>
 					<CardBody>
 						<div className="container mt-3 p-4 ">
