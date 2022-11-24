@@ -4,8 +4,8 @@ import { Link, useLocation } from "react-router-dom";
 
 const navigation = [
   {
-    title: "Front Office",
-    href: "/frontOffice",
+    title: "Dashboard",
+    href: "/adminDash",
     icon: "bi bi-bar-chart-fill",
   },
   {
