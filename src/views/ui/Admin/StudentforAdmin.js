@@ -41,7 +41,7 @@ const Forms = () => {
                 <Input id="term1" name="number" type="number" />
               </FormGroup>
               <FormGroup>
-                <Label for="term2">Term 1</Label>
+                <Label for="term2">Term 2</Label>
                 <Input id="term2" name="number" type="number" />
               </FormGroup>
               <FormGroup>
@@ -49,11 +49,11 @@ const Forms = () => {
                 <Input id="halfYearly" name="number" type="number" />
               </FormGroup>
               <FormGroup>
-                <Label for="term3">Term 1</Label>
+                <Label for="term3">Term 3</Label>
                 <Input id="term3" name="number" type="number" />
               </FormGroup>
               <FormGroup>
-                <Label for="term4">Term 1</Label>
+                <Label for="term4">Term 4</Label>
                 <Input id="term4" name="number" type="number" />
               </FormGroup>
               <FormGroup>
