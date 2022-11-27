@@ -5,7 +5,7 @@ import {
   NavbarBrand,
   Button,
 } from "reactstrap";
-import { ReactComponent as LogoWhite } from "../assets/images/logos/xtremelogowhite.svg";
+import { ReactComponent as LogoWhite } from "../assets/images/logos/school.svg";
 import { Button as Btn}  from "@mui/material";
 
 const Header = () => {

@@ -120,23 +120,7 @@ const Home = ({ loginStatus = () => {} }) => {
                                         >
                                             Submit
                                         </Button>{" "}
-                                        <Link
-                                            to="/AdminLayout"
-                                            style={{ textDecoration: "none" }}
-                                        >
-                                            <Button
-                                                variant="primary"
-                                                className="content-wrap  mt-3 "
-                                                style={{
-                                                    background:
-                                                        "rgb(51 , 153 , 255)",
-                                                    relativeposition: " ",
-                                                }}
-                                                type="submit"
-                                            >
-                                                Admin
-                                            </Button>
-                                        </Link>
+                                        
                                         <span> </span>
                                         <span> </span>
                                         <span> </span>
