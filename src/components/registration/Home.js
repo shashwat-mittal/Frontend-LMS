@@ -38,7 +38,7 @@ const Home = ({ loginStatus = () => {} }) => {
 	console.log(response.data);
       storeLS("jwt_token", response.data.access);
       loginStatus(true);
-      if(response.data.is_admin){
+      if(response.data.user.is_admin){
 		navigate("/admindashboard")
 	  }
 	  else{
