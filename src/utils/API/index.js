@@ -4,74 +4,89 @@ import { getLS } from "../LocalStorage/index";
 const API_URL = "http://localhost:8000/api";
 
 const getAccessToken = () => {
-  return getLS("jwt_token");
+    return getLS("jwt_token");
 };
 
 const getHeaders = (token) => {
-  if (!token) token = getAccessToken();
-  if (token){
-    console.log(token);
+    if (!token) token = getAccessToken();
+    if (token) {
+        console.log(token);
+        return {
+            headers: {
+                Accept: "application/json",
+                Authorization: `Bearer ${token}`,
+            },
+        };
+    }
     return {
-      headers: {
-        Accept: "application/json",
-        Authorization: `Bearer ${token}`,
-      },
+        headers: {
+            Accept: "application/json",
+        },
     };
-  }
-  return {
-    headers: {
-      Accept: "application/json",
-    },
-  };
 };
 
 const post = async (endpoint, body, token = null) => {
-  try {
-    const response = await axios.post(
-      API_URL + endpoint,
-      body,
-      getHeaders(token)
-    );
-    return response;
-  } catch (err) {
-    console.error(err?.response?.data || err);
-    return err?.response?.data || err;
-  }
+    try {
+        const response = await axios.post(
+            API_URL + endpoint,
+            body,
+            getHeaders(token)
+        );
+        return response;
+    } catch (err) {
+        console.error(err?.response?.data || err);
+        return err?.response?.data || err;
+    }
+};
+
+const postMultipart = async (endpoint, body, token = null) => {
+    let headers = getHeaders(token);
+    headers["headers"]["CONTENT_TYPE"] = "multipart/form-data";
+    try {
+        const response = await axios.post(API_URL + endpoint, body, headers);
+        return response;
+    } catch (err) {
+        console.error(err?.response?.data || err);
+        return err?.response?.data || err;
+    }
 };
 
 const get = async (endpoint, token = null) => {
-  try {
-    console.log(token);
-    const response = await axios.get(API_URL + endpoint, getHeaders(token));
-    return response;
-  } catch (err) {
-    console.error(err?.response?.data || err);
-    return err?.response?.data || err;
-  }
+    try {
+        console.log(token);
+        const response = await axios.get(API_URL + endpoint, getHeaders(token));
+        return response;
+    } catch (err) {
+        console.error(err?.response?.data || err);
+        return err?.response?.data || err;
+    }
 };
 
 const put = async (endpoint, body, token = null) => {
-  try {
-    const response = await axios.put(
-      API_URL + endpoint,
-      body,
-      getHeaders(token)
-    );
-    return response.data;
-  } catch (err) {
-    console.error(err?.response?.data || err);
-    return err?.response?.data || err;
-  }
+    try {
+        const response = await axios.put(
+            API_URL + endpoint,
+            body,
+            getHeaders(token)
+        );
+        return response.data;
+    } catch (err) {
+        console.error(err?.response?.data || err);
+        return err?.response?.data || err;
+    }
 };
 
 const remove = async (endpoint, token = null) => {
-  try {
-    const response = await axios.delete(API_URL + endpoint, getHeaders(token));
-    return response.data;
-  } catch (err) {
-    console.error(err?.response?.data || err);
-    return err?.response?.data || err;
-  }
+    try {
+        const response = await axios.delete(
+            API_URL + endpoint,
+            getHeaders(token)
+        );
+        return response.data;
+    } catch (err) {
+        console.error(err?.response?.data || err);
+        return err?.response?.data || err;
+    }
 };
 
-export { getAccessToken, post, get, put, remove };
+export { getAccessToken, post, get, put, remove, postMultipart };
