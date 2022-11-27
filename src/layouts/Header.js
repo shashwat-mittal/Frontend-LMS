@@ -5,6 +5,7 @@ import {
   NavbarBrand,
   Button,
 } from "reactstrap";
+import { Link } from "react-router-dom";
 import { ReactComponent as LogoWhite } from "../assets/images/logos/school.svg";
 import { Button as Btn}  from "@mui/material";
 
@@ -46,7 +47,8 @@ const Header = () => {
       </div>
       {/* const { date, time, wish } = useDate(); */}
       <Collapse navbar isOpen={isOpen}>
-        <Btn variant="outlined" size="small" style={{color:'#eeeee4',borderColor:'#eeeee4'}}>Log Out</Btn>
+      <Link to="/" style={{ textDecoration: "none" }}>
+        <Btn variant="outlined" size="small" style={{color:'#eeeee4',borderColor:'#eeeee4'}}>Log Out</Btn></Link>
       </Collapse>
     </Navbar>
   );
