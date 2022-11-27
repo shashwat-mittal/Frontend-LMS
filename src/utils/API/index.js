@@ -1,7 +1,7 @@
 import axios from "axios";
 import { getLS } from "../LocalStorage/index";
 
-const API_URL = "http://localhost:8000/api";
+const API_URL = "http://localhost:7000/api";
 
 const getAccessToken = () => {
     return getLS("jwt_token");
@@ -25,25 +25,14 @@ const getHeaders = (token) => {
     };
 };
 
-const post = async (endpoint, body, token = null) => {
-    try {
-        const response = await axios.post(
-            API_URL + endpoint,
-            body,
-            getHeaders(token)
-        );
-        return response;
-    } catch (err) {
-        console.error(err?.response?.data || err);
-        return err?.response?.data || err;
+const post = async (endpoint, body, token = null, form = false) => {
+    let options = getHeaders(token);
+    if (form) {
+        options.headers["Content-Type"] = "multipart/form-data";
     }
-};
-
-const postMultipart = async (endpoint, body, token = null) => {
-    let headers = getHeaders(token);
-    headers["headers"]["CONTENT_TYPE"] = "multipart/form-data";
     try {
-        const response = await axios.post(API_URL + endpoint, body, headers);
+        console.log(options);
+        const response = await axios.post(API_URL + endpoint, body, options);
         return response;
     } catch (err) {
         console.error(err?.response?.data || err);
@@ -89,4 +78,4 @@ const remove = async (endpoint, token = null) => {
     }
 };
 
-export { getAccessToken, post, get, put, remove, postMultipart };
+export { getAccessToken, post, get, put, remove };

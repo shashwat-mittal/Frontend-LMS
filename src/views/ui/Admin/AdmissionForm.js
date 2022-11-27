@@ -13,17 +13,31 @@ import {
     FormText,
 } from "reactstrap";
 
-import { useRef } from "react";
-import { postMultipart } from "../../../utils/API";
+import { useState, useEffect } from "react";
+import { post, get } from "../../../utils/API";
+import { useNavigate } from "react-router-dom";
 
 const Forms = () => {
-    const form = useRef(null);
-    async function handleSubmit(e) {
-        e.preventDefault();
-        let formData = new FormData(form.current);
-        let data = await postMultipart("/api/students/students", formData);
-        console.log(data);
+    const navigate = useNavigate();
+    let [classes, setClasses] = useState(null);
+    async function handleSubmit(event) {
+        let formData = new FormData(document.getElementById("form"));
+        let response = await post("/students/students", formData, null, true);
+        if ((response.status = 200)) {
+            alert("Student added Successfully!");
+            navigate("/adminDashboards");
+        }
     }
+    const getClassData = async (e) => {
+        const response = await get("/academics/class");
+        console.log(response);
+        if (response.status === 200) {
+            setClasses(response.data);
+        }
+    };
+    useEffect(() => {
+        getClassData();
+    }, []);
     return (
         <Row>
             <Col>
@@ -36,7 +50,7 @@ const Forms = () => {
                         Admission Details
                     </CardTitle>
                     <CardBody>
-                        <Form ref={form} onSubmit={handleSubmit}>
+                        <Form id="form">
                             <FormGroup>
                                 <Label for="studentName">Student Name</Label>
                                 <Input
@@ -58,19 +72,23 @@ const Forms = () => {
 
                             <FormGroup>
                                 <Label for="class">Class</Label>
-                                <Input id="class" name="select" type="select">
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                    <option>4</option>
-                                    <option>5</option>
-                                    <option>6</option>
-                                    <option>7</option>
-                                    <option>8</option>
-                                    <option>9</option>
-                                    <option>10</option>
-                                    <option>11</option>
-                                    <option>12</option>
+                                <Input
+                                    id="class"
+                                    name="class_section"
+                                    type="select"
+                                >
+                                    {classes?.map((item) => {
+                                        return (
+                                            <option
+                                                key={item.id}
+                                                value={item.id}
+                                            >
+                                                {item.classname +
+                                                    " " +
+                                                    item.section}
+                                            </option>
+                                        );
+                                    })}
                                 </Input>
                             </FormGroup>
                             <FormGroup>
@@ -103,10 +121,10 @@ const Forms = () => {
                             </FormGroup>
                             <FormGroup>
                                 <Label for="gender">Gender</Label>
-                                <Input id="gender" name="select" type="select">
-                                    <option>Male</option>
-                                    <option>Female</option>
-                                    <option>Other</option>
+                                <Input id="gender" name="gender" type="select">
+                                    <option>MALE</option>
+                                    <option>FEMALE</option>
+                                    <option>OTHER</option>
                                 </Input>
                             </FormGroup>
                             {/* <FormGroup>
@@ -117,7 +135,7 @@ const Forms = () => {
                                 <Label for="nationality">Nationality</Label>
                                 <Input
                                     id="nationality"
-                                    name="text"
+                                    name="nationality"
                                     type="text"
                                 />
                             </FormGroup>
@@ -125,7 +143,7 @@ const Forms = () => {
                                 <Label for="address">Address</Label>
                                 <Input
                                     id="address"
-                                    name="text"
+                                    name="address"
                                     type="textarea"
                                 />
                             </FormGroup>
@@ -133,7 +151,7 @@ const Forms = () => {
                                 <Label for="studentImage">Image</Label>
                                 <Input
                                     id="studentImage"
-                                    name="file"
+                                    name="image"
                                     type="file"
                                 />
                             </FormGroup>
@@ -145,16 +163,16 @@ const Forms = () => {
                                     type="email"
                                 />
                             </FormGroup>
-                            <FormGroup>
+                            {/* <FormGroup>
                                 <Label for="examplePassword">Password</Label>
                                 <Input
                                     id="examplePassword"
                                     name="password"
                                     type="password"
                                 />
-                            </FormGroup>
+                            </FormGroup> */}
 
-                            <Button type="submit">Submit</Button>
+                            <Button onClick={handleSubmit}>Submit</Button>
                         </Form>
                     </CardBody>
                 </Card>
