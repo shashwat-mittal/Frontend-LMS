@@ -35,10 +35,15 @@ const Home = ({ loginStatus = () => {} }) => {
     // console.log(response);
 
     if (response.status === 200) {
-      storeLS("jwt_token", response.data.token);
+	console.log(response.data);
+      storeLS("jwt_token", response.data.access);
       loginStatus(true);
-      console.log("DONEEE");
-      navigate("../");
+      if(response.data.is_admin){
+		navigate("/admindashboard")
+	  }
+	  else{
+		navigate("/teacherdashboard")
+	  }
     } else {
       console.log(response.err);
     }
