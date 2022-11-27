@@ -12,6 +12,7 @@ import {
   Input,
 } from "reactstrap";
 import { get, post } from "../../../utils/API";
+import generatePDF from "../../../utils/Table/statementGenerator";
 
 const Forms = () => {
   const [change, setChange] = useState("");
@@ -40,6 +41,9 @@ const Forms = () => {
   function handleClassChange(e) {
     setSelectedClass(e.target.value);
     console.log(e.target.value);
+  }
+  function generateFile(e){
+    generatePDF(classData);
   }
   
   useEffect(() => {
@@ -109,13 +113,13 @@ const Forms = () => {
                       value={selectedClass}
                       onChange={handleClassChange}
                     >
-                      {classes.map((item) => {
+                      {classes.length?classes.map((item) => {
                         return (
                           <option key={item.id} value={item.id}>
                             {item.classname + " " + item.section}
                           </option>
                         );
-                      })}
+                      }) : <h3>No data to show</h3>}
                     </Input>
                   </FormGroup>
 
@@ -150,13 +154,16 @@ const Forms = () => {
                       <td>{val.phone_number}</td>
                       <td>{val.enrollment_id}</td>
                       <td>{val.class_section}</td>
-
                     </tr>
                   );
                 })}
               </tbody>
             </table>
           </Col>
+        </Row>
+        <Row>
+        <Col><Button onClick={generateFile}>Generate PDF</Button></Col>
+          
         </Row>
       </div>
     );

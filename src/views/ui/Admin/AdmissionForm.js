@@ -22,9 +22,8 @@ const Forms = () => {
     let [classes, setClasses] = useState(null);
     async function handleSubmit(event) {
         let formData = new FormData(document.getElementById("form"));
-        console.log(formData)
         let response = await post("/students/students", formData, null, true);
-        if ((response.status = 200)) {
+        if (response.status === 200) {
             alert("Student added Successfully!");
             navigate("/admindashboard");
         }

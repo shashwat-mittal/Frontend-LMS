@@ -21,7 +21,6 @@ import { useNavigate } from "react-router-dom";
 	const navigate = useNavigate();
     async function handleSubmit(event) {
         let formData = new FormData(document.getElementById("form"));
-		console.log(formData)
 		formData.append("is_teacher",true)
         let response = await post("/users/add",formData, null, true);
         if ((response.status === 200)) {
