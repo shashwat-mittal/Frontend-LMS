@@ -5,7 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 const navigation = [
   {
     title: "Dashboard",
-    href: "/adminDash",
+    href: "/admindashboard",
     icon: "bi bi-bar-chart-fill",
   },
   {

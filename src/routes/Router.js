@@ -43,7 +43,7 @@ const ThemeRoutes = [
     path: "/",
     element: <AdminLayout />,
     children: [
-      { path: "/AdminLayout", element: <Navigate to="/adminDash" /> },
+      { path: "/AdminLayout", element: <Navigate to="/admindashboard" /> },
       { path: "/admindashboard", exact: true, element: <AdminDashboard /> },
       { path: "/admissionForm", exact: true, element: <AdmissionForm /> },
       { path: "/newTeacher", exact: true, element: <NewTeacher /> },
