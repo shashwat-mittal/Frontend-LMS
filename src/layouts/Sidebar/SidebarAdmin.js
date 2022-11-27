@@ -28,16 +28,19 @@ const navigation = [
     href: "/newTeacher",
     icon: "bbi bi-person",
   },
-  {
-    title: "MIS",
-    href: "/mis",
-    icon: "bbi bi-bar-chart-line",
-  },
-  {
-    title: "Change Password",
-    href: "/changepwd",
-    icon: "bi bi-pencil-square",
-  },
+  //Upload Notice and Time Table in MIS Frontend Already Exist
+  // {
+  //   title: "MIS",
+  //   href: "/mis",
+  //   icon: "bbi bi-bar-chart-line",
+  // },
+
+  //Change Password Frontend Already Exist
+  // {
+  //   title: "Change Password",
+  //   href: "/changepwd",
+  //   icon: "bi bi-pencil-square",
+  // }, 
 
 ];
 
