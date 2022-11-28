@@ -16,6 +16,7 @@ const Mis = lazy(() => import("../views/ui/Admin/MIS"));
 const ChangePassword = lazy(() => import("../views/ui/Admin/ChangePassword"));
 const FrontOffice = lazy(() => import("../views/ui/Admin/FrontOffice"));
 const Home =lazy(() => import("../components/registration/Home"))
+const TeacherList = lazy(() => import("../views/ui/Admin/TeacherList"));
 
 /*****Student Pages ****/
 const StudentDashboard = lazy(() => import("../views/StudentDashboard"));
@@ -50,6 +51,7 @@ const ThemeRoutes = [
       { path: "/studentforAdmin", exact: true, element: <StudentforAdmin /> },
       { path: "/cbse", exact: true, element: <Cbse /> },
       { path: "/mis", exact: true, element: <Mis /> },
+      { path: "/teacherList", exact: true, element: <TeacherList /> },
       { path: "/changepwd", exact: true, element: <ChangePassword /> },
       { path: "/frontOffice", exact: true, element: <FrontOffice /> },
     ],

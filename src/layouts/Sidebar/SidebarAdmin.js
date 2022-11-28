@@ -28,6 +28,11 @@ const navigation = [
     href: "/newTeacher",
     icon: "bbi bi-person",
   },
+  {
+    title: "Teacher List",
+    href: "/teacherList",
+    icon: "bbi bi-person",
+  },
   //Upload Notice and Time Table in MIS Frontend Already Exist
   // {
   //   title: "MIS",
