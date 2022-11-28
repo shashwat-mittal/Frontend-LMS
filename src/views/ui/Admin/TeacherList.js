@@ -12,6 +12,8 @@ import {
   Input,
 } from "reactstrap";
 import { get, post } from "../../../utils/API";
+import generatePDF from "../../../utils/Table/teacherListGenerator";
+
 
 const Forms = () => {
   const [formSubmitted, setFormSubmitted] = useState(false);
@@ -24,6 +26,9 @@ const Forms = () => {
     }
     setFormSubmitted(true);
   };
+  function generateFile(e){
+    generatePDF(teacherData);
+  }
 
   if (!formSubmitted) {
     return (
@@ -39,7 +44,7 @@ const Forms = () => {
             </CardTitle>
             <CardBody>
               <Form>
-                <Button onClick={handleSubmitForm}>Submit</Button>
+                <Button onClick={handleSubmitForm}>Generate Teachers List</Button>
               </Form>
             </CardBody>
           </Card>
@@ -98,6 +103,9 @@ const Forms = () => {
           </tbody>
         </table>
       </Col>
+    </Row>
+    <Row>
+    <Col><Button onClick={generateFile}>Generate PDF</Button></Col>    
     </Row>
       </div>
     );
