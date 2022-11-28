@@ -44,6 +44,7 @@ const Home = ({ loginStatus = () => {} }) => {
                 navigate("/teacherdashboard");
             }
         } else {
+            alert("Wrong username and password!");
             console.log(response.err);
         }
     }
