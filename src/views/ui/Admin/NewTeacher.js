@@ -58,7 +58,11 @@ import { useNavigate } from "react-router-dom";
 				
 				<FormGroup>
 				  <Label for="gender">Gender</Label>
+<<<<<<< HEAD
 				  <Input id="gender" name="gender" type="select">
+=======
+				  <Input id="gender" name="select" type="select">
+>>>>>>> 61f342d (feat: Implemented PDF generator for Students)
 					<option>MALE</option>
 					<option>FEMALE</option>
 					<option>OTHER</option>
